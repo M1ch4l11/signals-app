@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <label for="userName">Username:</label>
+      <input type="text" formControlName="userName" />
+    </div>
+    <div class="row">
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password" />
+    </div>
+    <button type="submit" [class.valid]="loginForm.valid">Login</button>
+  </form>
+</div>
+
+<app-main></app-main>
