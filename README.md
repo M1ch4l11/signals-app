@@ -1,27 +1,17 @@
 # SignalsApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Angular goes to the new era, more easier for developers, !! finally !!
+Enjoy new concept in basic login app.
 
-## Development server
+## Writable signals
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This concept is central to signals, enabling us to make this methods :
+  > set: set the signal, if the signal already exists, it will replace it
+  > update: In this case is the same as set(), but we can proccesing existing signal
+  > mutate: Finally a concept that every Angular developer will be in love, Mutate "we change the signal without replacing existing signal" signal in real time
 
-## Code scaffolding
+## Computed signals
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+deriving signals from other signals:
+ > signal = computed( () => existingSignal() + 2)
+If the value in the existing signal changes, calculate() is executed for signal
